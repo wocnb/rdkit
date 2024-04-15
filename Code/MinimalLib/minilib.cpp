@@ -190,6 +190,11 @@ std::string JSMol::get_morgan_fp(const std::string &details) const {
   return res;
 }
 
+std::string JSMol::get_formula() const {
+  if (!d_mol) return "";
+  return MinimalLib::get_formula(*d_mol);
+}
+
 std::string JSMol::get_morgan_fp_as_binary_text(
     const std::string &details) const {
   assert(d_mol);
