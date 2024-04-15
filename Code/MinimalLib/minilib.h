@@ -44,6 +44,7 @@ class JSMol {
   std::string get_substruct_match(const JSMol &q) const;
   std::string get_substruct_matches(const JSMol &q) const;
   std::string get_descriptors() const;
+  std::string get_formula() const;
   std::string get_morgan_fp(const std::string &details) const;
   std::string get_morgan_fp() const { return get_morgan_fp("{}"); }
   std::string get_morgan_fp_as_binary_text(const std::string &details) const;
