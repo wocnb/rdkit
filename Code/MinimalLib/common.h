@@ -97,6 +97,7 @@ static constexpr int d_defaultHeight = 200;
 
 RWMol *mol_from_input(const std::string &input,
                       const std::string &details_json = "") {
+  RDDepict::preferCoordGen = true;
   bool sanitize = true;
   bool kekulize = true;
   bool removeHs = true;
