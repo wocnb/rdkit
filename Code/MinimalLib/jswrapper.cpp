@@ -384,6 +384,8 @@ EMSCRIPTEN_BINDINGS(RDKit_minimal) {
                 select_overload<std::string(int, int) const>(&JSMol::get_svg))
 
       .function("get_svg_with_highlights", &JSMol::get_svg_with_highlights)
+      .function("get_formula",
+                 select_overload<std::string() const>(&JSMol::get_formula))
 #ifdef __EMSCRIPTEN__
       .function("draw_to_canvas_with_offset", &draw_to_canvas_with_offset)
       .function("draw_to_canvas", &draw_to_canvas)
