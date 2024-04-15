@@ -196,6 +196,10 @@ RWMol *mol_from_input(const std::string &input, const char *details_json) {
   return mol_from_input(input, json);
 }
 
+std::string get_formula(const ROMol &m) {
+  return Descriptors::calcMolFormula(m, true, true);
+}
+
 RWMol *qmol_from_input(const std::string &input,
                        const std::string &details_json = "") {
   RWMol *res = nullptr;
